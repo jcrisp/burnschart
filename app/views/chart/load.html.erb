@@ -1,0 +1,28 @@
+<script>
+  $(document).ready(function() {
+    $('#chart div').reloadTileOpacity("<%= h params['selected_tiles'] %>");
+  });
+</script>
+
+<%= render :partial=>'terms_and_conditions' %>
+<br/>
+
+<h3>Patient Information</h2>
+
+  <label>Name:</label>
+  <%= h params["name"] %>
+  <br/>
+  <label>Date of birth:</label>
+  <%= h params["dob"] %>
+  <br/>
+  <label>Age:</label>
+  <%= h params["age"] %>
+  <br/>
+  <label>Estimated % burn area by referring Doctor:</label>
+  <%= h params["pcburn"] %>
+  <br/>
+
+<h3>Burns Chart</h3>
+<%= render :partial=>'chart' %>
+<br/>
+

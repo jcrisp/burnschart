@@ -1,0 +1,83 @@
+body 
+{
+	margin:0;
+	padding:0;
+	color:#000;
+	font: normal 76%/140% Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-align: center;
+} 
+
+#chart
+{
+  width: 1050px;
+  height: 1050px;
+  background-image: url(../images/background.gif);  
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+#chart div
+{
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+  float: left;
+  background-image: url(../images/foreground.gif);
+  background-repeat: no-repeat;
+  opacity: 0;
+  filter: alpha(opacity = 0); 
+}
+
+
+
+#main
+{
+  margin: 0 auto;
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+form { clear: both; }
+
+h1
+{
+  font-weight: bold;
+  font: 1.5em Verdana, Geneva, Arial, Helvetica, sans-serif; 
+}
+
+
+h3 { font-size: 1.2em;  }
+
+p { margin-top: 0.1em; margin-bottom: 1em; }
+
+label { float: left; width: 10em; margin-bottom: 0.5em; }
+br { clear: both; }
+input { width: 10em; margin-bottom: 0.5em; }
+
+.button { margin-top: 2em; width: 23em; }
+
+#logo { float: left; height: 80px; width: 80px; margin-right: 20px; padding-bottom: 10px; }
+
+#footer
+{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 600px;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.scrolling_box
+{
+  width: 70%;
+  height: 10em;
+  overflow: scroll;
+  border: 1px solid black;
+  clear: both;
+}

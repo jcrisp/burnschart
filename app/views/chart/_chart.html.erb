@@ -1,0 +1,21 @@
+
+<div id="chart">
+  <% 
+    width = 35 
+    height = 35
+    squares = 30 
+
+    (0...900).each do |number| 
+    x = -(number % squares) * width
+    y = -(number / squares).to_i * height
+  %>
+      <div style="background-position:<%= "#{x}px #{y}px" %>;"></div>
+  <% end %>
+</div>
+
+<br/>
+
+<%= image_tag "key.jpg" %>
+
+<br/>
+

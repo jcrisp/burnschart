@@ -1,0 +1,25 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <title>Burns Chart - Prototype</title>
+  <%= stylesheet_link_tag 'common', :media=>'all' %>
+  <%= javascript_include_tag 'jquery-1.3.2.min.js' %>
+  <%= javascript_include_tag 'common.js' %>
+</head>
+<body>
+  <div id="main">
+
+     <%= image_tag "logo.jpg", {:id=>'logo', :alt=>'[Logo]'} %>
+    <h2>Concord Repatriation General Hospital Online Burns Assessment</h1>
+    <p><strong>NB.</strong> This software is a prototype. It is not production quality and cannot be relied on.</p>
+    <br/>
+
+    <%= yield %>
+  </div>
+
+    <div id="footer">
+    </div>
+
+</body>

@@ -1,0 +1,48 @@
+<script>
+  $(document).ready(function() {
+    $('#chart div').enableClickableTilesWithRecordOnSubmit($('#submit'), $('#selected_tiles'));
+  });
+</script>
+
+<h3>Patient Information</h2>
+
+<% form_tag(:action=>:submit) do %>  
+  <label>Name:</label>
+  <%= text_field_tag "name" %>
+  <br/>
+  <label>Date of birth:</label>
+  <%= text_field_tag "dob" %>
+  <br/>
+  <label>Age:</label>
+  <%= text_field_tag "age" %>
+  <br/>
+  <label>Estimated % burn area by referring Doctor:</label>
+  <%= text_field_tag "pcburn" %>
+  <br/>
+<h3>Burns Chart</h3>
+<p>Click grid squares on chart to indicate areas burnt.</p>
+<ul>
+  <li>Click once for partial thickness</li>
+  <li>Click twice for full thickness</li>
+</ul>
+<p>Please ignore simple erythema - do not record on chart or incorporate into calculated % burn.</p>
+
+<%= render :partial=>'chart' %>
+
+<div class="legal">
+<h3>WARNING</h3>
+<p>
+This system has been set up for trial use only and is not designed to replace the usual burns transfer protocol. 
+<br/>Please ensure that you have contacted the receiving burns team via telephone with patient details prior to use of this form.<br/>
+Please note this information will be transmitted by unencrypted email to the receiving team. 
+<br/>As there is risk of third party access to this information, please keep patient details to the minimum as requested on this form.</p>
+  <br/>
+
+<%= render :partial=>'terms_and_conditions' %>
+
+<%= hidden_field_tag "selected_tiles" %>
+<br/>
+<p><strong>By clicking the button below you agree that you have read the warning and agreed to the conditions of use above.</strong><br/>
+<%= submit_tag " Send information to receiving burns team > ", {:class=>'button', :id=>'submit'} %>
+</p>
+<% end %>

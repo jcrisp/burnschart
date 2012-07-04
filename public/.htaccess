@@ -1,0 +1,4 @@
+AuthUserFile /home/admin/burnschart.com/public/.htpasswd
+AuthName "Burns Chart"
+AuthType Basic
+Require valid-user
